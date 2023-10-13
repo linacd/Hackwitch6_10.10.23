@@ -11,16 +11,40 @@
         <!--Second View Controller-->
         <scene sceneID="EP3-PP-PeE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oig-H9-VQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="NNM-Xv-9Fx" customClass="secondViewController" customModule="Hackwitch6_10_10_23" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsG-wt-Nbh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-Zp-JSb">
+                                <rect key="frame" x="0.0" y="79" width="393" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="J95-0N-NPv">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J95-0N-NPv" id="vuh-4m-wNJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NsG-wt-Nbh" id="SL1-hS-2xE"/>
+                                    <outlet property="delegate" destination="NsG-wt-Nbh" id="Ub6-nK-8yI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ra8-lY-zP6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="FfC-Gi-2E8"/>
+                    <connections>
+                        <outlet property="tableView" destination="aeX-Zp-JSb" id="emS-tc-Drs"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oig-H9-VQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.25954198473278" y="106.33802816901409"/>
         </scene>
